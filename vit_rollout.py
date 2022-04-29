@@ -61,4 +61,4 @@ class VITAttentionRollout:
         with torch.no_grad():
             output = self.model(input_tensor)
 
-        return rollout(self.attentions, self.discard_ratio, self.head_fusion)
+        return output,rollout(self.attentions, self.discard_ratio, self.head_fusion)
